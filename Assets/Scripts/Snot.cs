@@ -12,7 +12,6 @@ public class Snot : MonoBehaviour
         if (collision.gameObject.CompareTag("Slime"))
         {
             Character slime = collision.GetComponent<Character>();
-            slime.snots.Add(1);
             Destroy(gameObject);
         }
     }
