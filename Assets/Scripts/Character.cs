@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Character : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D feet;
@@ -19,7 +19,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
