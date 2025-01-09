@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D feet;
+    private Feet feet;
 
 
     private List<int> snots = new List<int>();
@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        feet = GetComponentInChildren<Feet>();
     }
 
     void Update()
@@ -32,6 +33,11 @@ public class Character : MonoBehaviour
         {
             spriteRenderer.flipX = moveInput < 0;
         }
+        //if (feet.land)
+        //{
+            
+        //    animator.SetTrigger("FloorCollision");
+        //}
         
     }
     
@@ -44,10 +50,6 @@ public class Character : MonoBehaviour
     private void OnJump(InputValue input)
     {
         animator.SetTrigger("Jump");
+        feet.land = false;
     }
-
-    //private void OnTriggerEnter2D(Collider collider)
-    //{
-        // No se como hacer que el trigger del hijo que son los pies (feet) detecten el suelo para ejecutar la transicion de jump a idle o walk
-    //}
 }
