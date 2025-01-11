@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a336671f5086047971c4893452285b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  land: 0
 --- !u!1 &3967942955178228525
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+  jumpForce: 5
 --- !u!61 &2618985511341463177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,7 +267,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!82 &6978052947137874587
 AudioSource:
   m_ObjectHideFlags: 0

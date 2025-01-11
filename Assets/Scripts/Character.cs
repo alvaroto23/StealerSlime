@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float jumpForce;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -27,20 +29,20 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(moveInput * movementSpeed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * movementSpeed, rb.velocity.y);
         animator.SetBool("Move", moveInput != 0);
         if (moveInput != 0 )
         {
             spriteRenderer.flipX = moveInput < 0;
         }
-        //if (feet.land)
-        //{
-            
-        //    animator.SetTrigger("FloorCollision");
-        //}
-        
+        if (feet.landing == true)
+        {
+            animator.SetTrigger("FloorCollision");
+            feet.landing = false;
+        }
+
     }
-    
+
 
     private void OnMove (InputValue value)
     {
@@ -50,6 +52,8 @@ public class Character : MonoBehaviour
     private void OnJump(InputValue input)
     {
         animator.SetTrigger("Jump");
-        feet.land = false;
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
     }
+
 }

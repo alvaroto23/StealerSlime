@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Feet : MonoBehaviour
 {
-    public bool land = true;
+    public bool landing = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground"))
         {
-            land = true;
+            landing = true;
         }
     }
 }
