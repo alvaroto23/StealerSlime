@@ -2316,7 +2316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9176328582543358595
 PrefabInstance:
@@ -2330,6 +2330,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIInGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9176328582543358602}
+    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: returnGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3730283536843892749, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2340,7 +2356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3730283536843892749, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3730283536843892749, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2414,6 +2430,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6456884379757119166, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35.550415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456884379757119166, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.310791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840495150629494863, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9176328582543358602}
+    - target: {fileID: 6840495150629494863, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840495150629494863, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840495150629494863, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2428,5 +2468,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9176328582543358602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 288949177242174708, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+  m_PrefabInstance: {fileID: 9176328582543358595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a26541aca906e2428fa3eb73f3ad198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
