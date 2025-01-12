@@ -23,20 +23,20 @@ public class Fades : MonoBehaviour
     {
         if (!isFaded)
         {
-            t += duration / Time.deltaTime;
             cg.alpha = Mathf.Lerp(cg.alpha, minAlpha, t);
 
             if (cg.alpha == minAlpha)
             {
                 image.SetActive(false);
             }
+            t += duration / Time.deltaTime;
         }
 
         else if (isFaded)
         {
             image.SetActive(true);
-            t += duration / Time.deltaTime;
             cg.alpha = Mathf.Lerp(cg.alpha, maxAlpha, t);
+            t += duration / Time.deltaTime;
         }
     }
 

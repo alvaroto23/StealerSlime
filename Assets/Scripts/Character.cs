@@ -8,16 +8,20 @@ using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour
 {
+    [Header("Movement Parameters")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
-    [SerializeField] private TextMeshProUGUI snotCounter;
+
+    [Header("Raycast Configuration")]
+    [SerializeField] private LayerMask groundLayerMask;
+    [SerializeField] private float rayDistance;
+
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private Feet feet;
 
+    private float timeInAir;
 
-    private List<int> snots = new List<int>();
     private float moveInput;
     private bool onAir;
 
@@ -27,55 +31,54 @@ public class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        feet = GetComponentInChildren<Feet>();
+ 
     }
 
     void Update()
     {
+        RaycastHit2D raycastGround = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayerMask);
+        Debug.DrawRay(transform.position, Vector2.down * rayDistance, Color.red);
+
         rb.velocity = new Vector2(moveInput * movementSpeed, rb.velocity.y);
-        animator.SetBool("Move", moveInput != 0);
-        if (moveInput != 0 )
+
+        if (raycastGround)
+        {
+            animator.SetBool("Move", moveInput != 0);
+            animator.SetBool("Jump", false);
+            timeInAir = 0;
+        }
+        else if (!raycastGround)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Move", false);
+            timeInAir += Time.deltaTime;
+
+            if (timeInAir > 0.1f && raycastGround)
+            {
+                animator.SetBool("Jump", false);
+                animator.SetBool("Land", true);
+            }
+        }
+        if (moveInput != 0)
         {
             spriteRenderer.flipX = moveInput < 0;
         }
-        if (feet.landing == true)
-        {
-            animator.SetTrigger("FloorCollision");
-            feet.landing = false;
-            onAir = false;
-        }
-
     }
 
-
-    private void OnMove (InputValue value)
+    private void OnMove(InputValue value)
     {
         moveInput = value.Get<float>();
     }
 
     private void OnJump(InputValue input)
     {
-        if (onAir == false)
         {
-            animator.SetTrigger("Jump");
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            onAir = true;
-        }
-        else if (onAir == true)
-        {
-            print("No puedes saltar");
-        }
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Snot"))
-        {
-            snots.Add(1);
-            snotCounter.text = "" + snots.Count;
+            RaycastHit2D raycastGround = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayerMask);
+            if (raycastGround)
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                timeInAir += Time.deltaTime;
+            }
         }
     }
-
-
 }

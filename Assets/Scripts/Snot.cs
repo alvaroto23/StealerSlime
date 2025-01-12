@@ -5,15 +5,21 @@ using UnityEngine.InputSystem;
 
 public class Snot : MonoBehaviour
 {
-
+    private CoinManager coinManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Slime"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Character slime = collision.GetComponent<Character>();
-            Destroy(gameObject);
+            coinManager.AddCoin(gameObject);
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("");
+            Destroy(gameObject); 
         }
+    }
+
+    private void Start()
+    {
+        coinManager = GetComponentInParent<CoinManager>();  
     }
 
 }
