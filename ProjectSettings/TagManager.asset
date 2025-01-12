@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Slime
   - Ground
+<<<<<<< Updated upstream
   - Snot
   - SnotCounter
+=======
+  - Coin
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,11 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< Updated upstream
   - BackGroundUI
+=======
+  - Ground
+>>>>>>> Stashed changes
   - 
   - 
   - 
