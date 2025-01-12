@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65, y: 0.1}
+  m_Size: {x: 0.47, y: 0.1}
   m_EdgeRadius: 0.02
 --- !u!114 &2624975825873248060
 MonoBehaviour:
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a336671f5086047971c4893452285b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  land: 0
+  landing: 0
 --- !u!1 &3967942955178228525
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  jumpForce: 5
+  jumpForce: 9
+  snotCounter: {fileID: 0}
 --- !u!61 &2618985511341463177
 BoxCollider2D:
   m_ObjectHideFlags: 0

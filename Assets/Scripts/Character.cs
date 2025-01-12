@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private TextMeshProUGUI snotCounter;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -17,6 +19,7 @@ public class Character : MonoBehaviour
 
     private List<int> snots = new List<int>();
     private float moveInput;
+    private bool onAir;
 
 
     private void Awake()
@@ -39,6 +42,7 @@ public class Character : MonoBehaviour
         {
             animator.SetTrigger("FloorCollision");
             feet.landing = false;
+            onAir = false;
         }
 
     }
@@ -51,9 +55,27 @@ public class Character : MonoBehaviour
 
     private void OnJump(InputValue input)
     {
-        animator.SetTrigger("Jump");
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if (onAir == false)
+        {
+            animator.SetTrigger("Jump");
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            onAir = true;
+        }
+        else if (onAir == true)
+        {
+            print("No puedes saltar");
+        }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Snot"))
+        {
+            snots.Add(1);
+            snotCounter.text = "" + snots.Count;
+        }
+    }
+
 
 }

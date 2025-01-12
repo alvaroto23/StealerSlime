@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5790640643846739216}
   m_Layer: 0
   m_Name: Snot
-  m_TagString: Untagged
+  m_TagString: Snot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

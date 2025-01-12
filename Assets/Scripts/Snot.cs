@@ -16,8 +16,4 @@ public class Snot : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
 }
