@@ -52,12 +52,6 @@ public class Character : MonoBehaviour
             animator.SetBool("Jump", true);
             animator.SetBool("Move", false);
             timeInAir += Time.deltaTime;
-
-            if (timeInAir > 0.1f && raycastGround)
-            {
-                animator.SetBool("Jump", false);
-                animator.SetBool("Land", true);
-            }
         }
         if (moveInput != 0)
         {

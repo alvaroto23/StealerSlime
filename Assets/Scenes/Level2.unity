@@ -2959,6 +2959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 5340777959449387032, guid: 67b16da0f502496459b8c041f4a43474, type: 3}
+      propertyPath: rayDistance
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

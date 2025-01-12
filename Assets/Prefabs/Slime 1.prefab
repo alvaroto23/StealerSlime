@@ -107,7 +107,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  rayDistance: 0.25
+  rayDistance: 0.2
 --- !u!61 &1273153033224953774
 BoxCollider2D:
   m_ObjectHideFlags: 0
