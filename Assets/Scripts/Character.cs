@@ -75,4 +75,9 @@ public class Character : MonoBehaviour
             }
         }
     }
+
+    public void AnimationAudio()
+    {
+        FindObjectOfType<AudioManager>().PlayOneShotAudio("");
+    }
 }
