@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
 
     //[SerializeField] private AudioMixer mixer;
     private PlayerInput playerInput;
-    private GameObject[] menuButtons = new GameObject[3];
+    private GameObject[] menuButtons = new GameObject[4];
     private bool pauseGame = false;
 
     private void Awake()
