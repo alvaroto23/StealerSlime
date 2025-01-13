@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6947528704809426392
+--- !u!1 &5318503539955866547
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1899558774376211084}
-  - component: {fileID: 6675048119408076488}
+  - component: {fileID: 8423795425578268992}
+  - component: {fileID: 7749091158901305045}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1899558774376211084
+--- !u!4 &8423795425578268992
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6947528704809426392}
+  m_GameObject: {fileID: 5318503539955866547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.28334016, y: 0.36248645, z: 0.4141781}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,16 +32,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6675048119408076488
+--- !u!114 &7749091158901305045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6947528704809426392}
+  m_GameObject: {fileID: 5318503539955866547}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e27afef9adffb44990f47e9ad563a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipSounds: []
+  clipSounds:
+  - clipName: Jump
+    clip: {fileID: 8300000, guid: 9fcb1c6cda7c07a41b16e6f494633f87, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Land
+    clip: {fileID: 8300000, guid: b620ff76be8361849b0de14321bc06f6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Footstep Grass
+    clip: {fileID: 8300000, guid: 0c395de3aa626614b9b9e7b6680f5952, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Slime Coin
+    clip: {fileID: 8300000, guid: a4f007d82aa28d74085067e3d879af00, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Background Music
+    clip: {fileID: 8300000, guid: 0b87817c3d52a07479ac073e1fd8f052, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    audioSource: {fileID: 0}
+  - clipName: Background Music 1
+    clip: {fileID: 8300000, guid: 0fc75ea7cf4960b498efc8b74377704b, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    audioSource: {fileID: 0}
