@@ -21,9 +21,9 @@ public class Character : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private float timeInAir;
-
     private float moveInput;
-    private bool onAir;
+    private bool isJumping;
+ 
 
 
     private void Awake()
@@ -45,12 +45,14 @@ public class Character : MonoBehaviour
         {
             animator.SetBool("Move", moveInput != 0);
             animator.SetBool("Jump", false);
+            isJumping = false;
             timeInAir = 0;
         }
         else if (!raycastGround)
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Move", false);
+            isJumping = true;
             timeInAir += Time.deltaTime;
         }
         if (moveInput != 0)
@@ -73,11 +75,29 @@ public class Character : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 timeInAir += Time.deltaTime;
             }
+            
         }
     }
 
-    public void AnimationAudio()
+    public void FootstepAudio()
     {
-        FindObjectOfType<AudioManager>().PlayOneShotAudio("");
+        FindObjectOfType<AudioManager>().PlayOneShotAudio("Footstep Grass");
+    }
+
+    public void JumpAudio()
+    {
+        if(isJumping)
+        {
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("Jump");
+        }
+        else
+        {
+
+        }
+    }
+
+    public void LandAudio()
+    {
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("Land");
     }
 }

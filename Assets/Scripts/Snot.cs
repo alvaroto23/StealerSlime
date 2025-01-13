@@ -12,7 +12,7 @@ public class Snot : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             coinManager.AddCoin(gameObject);
-            FindObjectOfType<AudioManager>().PlayOneShotAudio("");
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("Slime Coin");
             Destroy(gameObject); 
         }
     }
