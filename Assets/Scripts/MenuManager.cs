@@ -14,10 +14,10 @@ public class MenuManager : MonoBehaviour
         fades = GetComponentInChildren<Fades>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void MainMenu()
     {
-        
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void StartGame()
