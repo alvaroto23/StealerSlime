@@ -4,7 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CoinManager : MonoBehaviour
+public class SnotManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI score;
     private List<GameObject> coinList = new List<GameObject>();

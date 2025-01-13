@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Snot : MonoBehaviour
 {
-    private CoinManager coinManager;
+    private SnotManager coinManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +19,7 @@ public class Snot : MonoBehaviour
 
     private void Start()
     {
-        coinManager = GetComponentInParent<CoinManager>();  
+        coinManager = GetComponentInParent<SnotManager>();  
     }
 
 }
