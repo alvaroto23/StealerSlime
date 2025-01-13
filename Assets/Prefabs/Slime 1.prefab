@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  jumpForce: 7.5
+  jumpForce: 9
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
