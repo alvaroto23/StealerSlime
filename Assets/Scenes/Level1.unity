@@ -2166,7 +2166,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e27afef9adffb44990f47e9ad563a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipSounds: []
+  clipSounds:
+  - clipName: Jump
+    clip: {fileID: 8300000, guid: 9fcb1c6cda7c07a41b16e6f494633f87, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Land
+    clip: {fileID: 8300000, guid: b620ff76be8361849b0de14321bc06f6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Footstep Grass
+    clip: {fileID: 8300000, guid: 0c395de3aa626614b9b9e7b6680f5952, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - clipName: Slime Coin
+    clip: {fileID: 8300000, guid: a4f007d82aa28d74085067e3d879af00, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
 --- !u!4 &2044475217
 Transform:
   m_ObjectHideFlags: 0
