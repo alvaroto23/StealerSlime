@@ -25,14 +25,6 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Level1")
-        {
-            FindObjectOfType<AudioManager>().PlayAudio("Background Music");
-        }
-        else if (SceneManager.GetActiveScene().name == "Level2")
-        {
-            FindObjectOfType<AudioManager>().PlayAudio("Background Music 1");
-        }
 
     }
 

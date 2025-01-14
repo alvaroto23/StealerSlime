@@ -16,6 +16,7 @@ public class MenuManager : MonoBehaviour
             FindObjectOfType<AudioManager>().PlayOneShotAudio("Win");
             FindObjectOfType<AudioManager>().PlayOneShotAudio("Monguer Narrator");
         }
+        
         fades = GetComponentInChildren<Fades>();
     }
 
