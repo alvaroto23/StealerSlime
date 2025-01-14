@@ -16638,7 +16638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 68733773}
-  portal: {fileID: 0}
+  portal: {fileID: 48410393583786735, guid: b96f94763bbd21141827b3153046e7bb, type: 3}
 --- !u!1 &1608393610
 GameObject:
   m_ObjectHideFlags: 0
