@@ -9,17 +9,13 @@ public class GameController : MonoBehaviour
 {
 
     //[SerializeField] private AudioMixer mixer;
+    [SerializeField] private List<GameObject> menuButtons = new List<GameObject>();
     private PlayerInput playerInput;
-    private GameObject[] menuButtons = new GameObject[4];
     private bool pauseGame = false;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            menuButtons[i] = transform.GetChild(i).gameObject;
-        }
     }
 
     private void Start()
@@ -29,7 +25,7 @@ public class GameController : MonoBehaviour
 
     private void ButtonsEnableState()
     {
-        for (int i = 0; i < menuButtons.Length; i++)
+        for (int i = 0; i < menuButtons.Count; i++)
         {
             if (menuButtons[i].CompareTag("SnotCounter") == false)
             {
@@ -45,11 +41,13 @@ public class GameController : MonoBehaviour
         //mixer.SetFloat("LowpassFreq", 22000);
         Time.timeScale = 1f;
         ButtonsEnableState();
+        print("Return");
     }
 
     public void ExitGame()
     {
         Application.Quit();
+        print("Exit");
     }
 
     private void OnPause()

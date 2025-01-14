@@ -57,6 +57,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a26541aca906e2428fa3eb73f3ad198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuButtons:
+  - {fileID: 2408297340042365346}
+  - {fileID: 7969524313953379662}
+  - {fileID: 8821040686005759496}
+  - {fileID: 3537803604532157207}
 --- !u!223 &5013699463525113888
 Canvas:
   m_ObjectHideFlags: 0
