@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void ReturnGame()
+    public void returnGame()
     {
         pauseGame = !pauseGame;
         //mixer.SetFloat("LowpassFreq", 22000);
