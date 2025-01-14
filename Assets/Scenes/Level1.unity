@@ -236,22 +236,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 273981385}
-    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: returnGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641654664273684292, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3730283536843892749, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
