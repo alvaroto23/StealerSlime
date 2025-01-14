@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class AudioManager : MonoBehaviour
             sounds.audioSource.loop = sounds.loop;
         }
     }
+
 
     public void PlayAudio(string name)
     {
@@ -77,7 +79,18 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            FindObjectOfType<AudioManager>().PlayAudio("Intro Background");
+        }
+        else if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            FindObjectOfType<AudioManager>().PlayAudio("Background Music");
+        }
+        else if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            FindObjectOfType<AudioManager>().PlayAudio("Background Music 1");
+        }
     }
 
     // Update is called once per frame

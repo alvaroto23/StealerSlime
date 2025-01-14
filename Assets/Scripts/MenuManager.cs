@@ -11,6 +11,11 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(SceneManager.GetActiveScene().name == "End")
+        {
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("Win");
+            FindObjectOfType<AudioManager>().PlayOneShotAudio("Monguer Narrator");
+        }
         fades = GetComponentInChildren<Fades>();
     }
 

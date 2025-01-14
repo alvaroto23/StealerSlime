@@ -71,13 +71,13 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - clipName: Background Music
     clip: {fileID: 8300000, guid: 0b87817c3d52a07479ac073e1fd8f052, type: 3}
-    volume: 0.4
+    volume: 0.1
     pitch: 1
     loop: 1
     audioSource: {fileID: 0}
   - clipName: Background Music 1
     clip: {fileID: 8300000, guid: 0fc75ea7cf4960b498efc8b74377704b, type: 3}
-    volume: 0.4
+    volume: 0.1
     pitch: 1
     loop: 1
     audioSource: {fileID: 0}

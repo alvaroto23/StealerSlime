@@ -131,17 +131,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 135432920049020703, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 149.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 135432920049020703, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -130.75
-      objectReference: {fileID: 0}
     - target: {fileID: 2272880962146974332, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_Name
       value: UIInGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533448012225547585, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_margin.z
+      value: -130.07777
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533448012225547585, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+      propertyPath: m_fontStyle
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3730283536843892749, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
       propertyPath: m_Pivot.x
@@ -232,6 +232,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+--- !u!114 &68733773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2533448012225547585, guid: ba0229f36b9b95e45a60b7f6d68154e5, type: 3}
+  m_PrefabInstance: {fileID: 68733772}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &209612892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16626,7 +16637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e63738951862c4fb14278979d2220d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  score: {fileID: 68733773}
+  portal: {fileID: 0}
 --- !u!1 &1608393610
 GameObject:
   m_ObjectHideFlags: 0
