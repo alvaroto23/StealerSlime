@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio;
+using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
